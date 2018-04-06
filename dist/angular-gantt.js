@@ -6846,7 +6846,8 @@ exports.default = ["GanttDirectiveBuilder", "$timeout", "ganttDebounce", functio
             var columnWidth = this.gantt.options.value('columnWidth');
             var bodySmallerThanGantt = $scope.gantt.width === 0 ? false : $scope.gantt.width < $scope.gantt.getWidth() - $scope.gantt.side.getWidth();
             if (columnWidth !== undefined && bodySmallerThanGantt) {
-                css['width'] = $scope.gantt.width + this.gantt.scroll.getBordersWidth() + 'px';
+//                css['width'] = $scope.gantt.width + this.gantt.scroll.getBordersWidth() + 'px';
+                css['width'] = $scope.gantt.width + 3 + 'px';
             }
             return css;
         };
