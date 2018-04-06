@@ -7340,7 +7340,8 @@ exports.default = ["GanttDirectiveBuilder", "ganttLayout", function (GanttDirect
             var columnWidth = this.gantt.options.value('columnWidth');
             var bodySmallerThanGantt = $scope.gantt.width === 0 ? false : $scope.gantt.width < $scope.gantt.getWidth() - $scope.gantt.side.getWidth();
             if (columnWidth !== undefined && bodySmallerThanGantt) {
-                css['width'] = $scope.gantt.width - vScrollbarWidth + this.gantt.scroll.getBordersWidth() + 'px';
+//                css['width'] = $scope.gantt.width - vScrollbarWidth + this.gantt.scroll.getBordersWidth() + 'px';
+                css['width'] = $scope.gantt.width - vScrollbarWidth + 3 + 'px';
             } else if (maxHeightActivated) {
                 css['width'] = $scope.gantt.getWidth() - $scope.gantt.side.getWidth() - vScrollbarWidth + 'px';
             }
